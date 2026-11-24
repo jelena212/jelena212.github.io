@@ -62,3 +62,25 @@ figcaption{margin-top:14px;font-size:14px;line-height:1.5;color:#5E5F5C}
   .pair{grid-template-columns:minmax(0,1fr)}
   .nav{gap:18px}
 }
+
+/* Klikabilno */
+a.zoom{display:block;cursor:zoom-in}
+.cover,.thumbs a,.shot a{display:block}
+.cover:hover img,.thumbs a:hover img{opacity:.88}
+.info h3 a{text-decoration:none}
+.info h3 a:hover{text-decoration:underline}
+.shot a:hover img{outline:2px solid #E4E3DF;outline-offset:-2px}
+.mat.v{max-width:62%;margin:0 auto}
+
+/* Prikaz preko celog ekrana */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(20,21,23,.96);display:flex;align-items:center;justify-content:center;padding:56px 64px}
+.lb[hidden]{display:none}
+.lb-fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:12px;max-width:100%;max-height:100%}
+.lb-fig img{max-width:100%;max-height:calc(100vh - 140px);width:auto;height:auto;object-fit:contain}
+.lb-fig figcaption{color:#C9C8C3;font-size:14px}
+.lb-btn{position:absolute;background:none;border:0;color:#E4E3DF;font:inherit;font-size:40px;line-height:1;width:56px;height:56px;cursor:pointer}
+.lb-btn:focus-visible{outline:2px solid #E4E3DF}
+.lb-close{top:8px;right:8px}
+.lb-prev{left:4px;top:50%;transform:translateY(-50%)}
+.lb-next{right:4px;top:50%;transform:translateY(-50%)}
+@media (max-width:760px){.lb{padding:56px 8px}.lb-prev,.lb-next{top:auto;bottom:8px;transform:none}.mat.v{max-width:100%}}
